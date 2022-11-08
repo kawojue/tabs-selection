@@ -31,7 +31,7 @@ header div {
 }
 
 .menu {
-    @apply grid grid-cols-1 w-[95vw] max-w-[1200px] trans-all-linear px-5;
+    @apply grid grid-cols-1 w-[95vw] max-w-[1200px] justify-start trans-all-linear px-5 gap-12;
 }
 
 .btn-container {
@@ -39,12 +39,56 @@ header div {
 }
 
 .btn {
-    @apply text-2xl trans-all-linear;
+    @apply text-2xl trans-all-linear tracking-wide;
 }
 
 .btn:hover,
 .btn.active {
     @apply border-b-2 border-b-pry-clr-2 text-pry-clr-2;
+}
+
+.titles {
+    @apply flex flex-col gap-3 mb-5;
+}
+
+.titles h3 {
+    @apply tracking-wider text-3xl
+}
+
+.titles h5 {
+    @apply bg-pry-clr-5 text-pry-clr-6 px-2 py-0.5 w-fit font-semibold rounded-md tracking-wider;
+}
+
+.titles p {
+    @apply text-pry-clr-6 tracking-widest font-light;
+}
+
+.duties {
+    @apply flex flex-col gap-5;
+}
+
+.duty {
+    @apply flex justify-between gap-10 items-center;
+}
+
+.icon {
+    @apply text-pry-clr-2 font-medium text-xl;
+}
+
+.duty p {
+    @apply text-sm text-pry-clr-7 leading-relaxed;
+}
+
+.btn-info-container {
+    @apply w-full flex justify-center;
+}
+
+.btn-info-container button {
+    @apply px-9 py-1 uppercase text-white bg-pry-clr-2 rounded-md trans-all-linear mt-14;
+}
+
+.btn-info-container button:hover {
+    @apply text-pry-clr-4 bg-pry-clr-3;
 }
 
 @media screen and (min-width: 900px) {
@@ -57,7 +101,7 @@ header div {
     }
 
     .btn-container {
-        @apply flex-col gap-3;
+        @apply flex-col gap-3 justify-start;
     }
 
     .btn.active {
