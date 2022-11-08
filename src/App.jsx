@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import Header from "./components/Header"
 import Context from './components/Context'
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   if (isLoading) {
     return (
       <main>
-        <h1>Loading...</h1>
+        <h1 className="info">Loading...</h1>
       </main>
     )
   }
@@ -15,13 +16,14 @@ function App() {
   if (fetchErr) {
     return (
       <main>
-        <h1>{fetchErr}</h1>
+        <h1 className="info">{fetchErr}</h1>
       </main>
     )
   }
 
   return (
     <main>
+      <Header />
       <p>Greetings - Hello, World!</p>
     </main>
   )
