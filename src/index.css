@@ -10,8 +10,12 @@ body {
     @apply mt-14 mb-10;
 }
 
-.tras-all-linear {
+.trans-all-linear {
     @apply transition-all duration-200 ease-linear;
+}
+
+main {
+    @apply grid place-items-center w-full;
 }
 
 .info {
@@ -19,15 +23,50 @@ body {
 }
 
 header {
-    @apply mb-10 flex flex-col items-center gap-3;
+    @apply mb-16 flex flex-col items-center gap-3;
 }
 
 header div {
     @apply bg-pry-clr-2 h-1.5 w-28 rounded-md;
 }
 
-@media screen and (min-width: 768px) {
+.menu {
+    @apply grid grid-cols-1 w-[95vw] max-w-[1200px] trans-all-linear px-5;
+}
+
+.btn-container {
+    @apply flex gap-5 w-full justify-center;
+}
+
+.btn {
+    @apply text-2xl trans-all-linear;
+}
+
+.btn:hover,
+.btn.active {
+    @apply border-b-2 border-b-pry-clr-2 text-pry-clr-2;
+}
+
+@media screen and (min-width: 900px) {
     .info {
         @apply text-5xl;
+    }
+
+    .menu {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .btn-container {
+        @apply flex-col gap-3;
+    }
+
+    .btn.active {
+        border-bottom: 0;
+        @apply border-b-2 border-b-pry-clr-2;
+    }
+
+    .btn:hover {
+        border-bottom: 0;
+        @apply border-l-2 border-l-pry-clr-2;
     }
 }
