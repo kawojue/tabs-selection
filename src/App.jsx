@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import Menu from './components/Menu'
 import Header from "./components/Header"
 import Context from './components/Context'
 
@@ -24,7 +25,7 @@ function App() {
   return (
     <main>
       <Header />
-      <p>Greetings - Hello, World!</p>
+      <Menu />
     </main>
   )
 }
