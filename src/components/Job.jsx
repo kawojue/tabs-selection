@@ -16,11 +16,14 @@ const Job = () => {
             <ul className="duties">
                 {duties.map((duty, index) => (
                     <li key={index} className="duty">
-                        <FaAngleDoubleRight />
-                        {duty}
+                        <FaAngleDoubleRight className="icon" />
+                        <p>{duty}</p>
                     </li>
                 ))}
             </ul>
+            <div className="btn-info-container">
+                <button>more info</button>
+            </div>
         </article>
     )
 }
