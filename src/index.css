@@ -5,3 +5,29 @@
 body {
     @apply font-poppins bg-pry-clr-0;
 }
+
+#root {
+    @apply mt-14 mb-10;
+}
+
+.tras-all-linear {
+    @apply transition-all duration-200 ease-linear;
+}
+
+.info {
+    @apply text-center text-pry-clr-1 text-3xl font-semibold;
+}
+
+header {
+    @apply mb-10 flex flex-col items-center gap-3;
+}
+
+header div {
+    @apply bg-pry-clr-2 h-1.5 w-28 rounded-md;
+}
+
+@media screen and (min-width: 768px) {
+    .info {
+        @apply text-5xl;
+    }
+}
