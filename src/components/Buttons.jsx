@@ -2,17 +2,18 @@ import Context from './Context'
 import { useContext } from 'react'
 
 const Buttons = () => {
-    const { jobs, activeJob } = useContext(Context)
+    const { jobs, value, setValue } = useContext(Context)
 
     return (
-        <section className="btn-container">
+        <article className="btn-container">
             {jobs.map((job, index) => (
                 <button key={job.id}
-                    className={`btn ${index === activeJob ? 'active' : ''}`}>
+                    onClick={() => setValue(index)}
+                    className={`btn ${index === value && 'active'}`}>
                     {job.company}
                 </button>
             ))}
-        </section>
+        </article>
     )
 }
 
