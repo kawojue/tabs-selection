@@ -14,6 +14,7 @@ module.exports = {
         "pry-clr-4": 'rgb(4, 78, 83)',
         "pry-clr-5": 'rgb(218, 226, 236)',
         "pry-clr-6": 'rgb(97, 125, 152)',
+        "pry-clr-7": 'rgb(50, 77, 103)',
       }
     },
   },
