@@ -1,14 +1,14 @@
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import { createContext, useState, useEffect } from 'react'
 
-
 const Context = createContext({})
 
 export const DataProvider = ({ children }) => {
     const url = 'https://course-api.com/react-tabs-project'
-    const [isLoading, setIsLoading] = useState(true)
-    const [fetchErr, setFetchErr] = useState(null)
     const [jobs, setJobs] = useState([])
+    const [fetchErr, setFetchErr] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
+    const [value, setValue] = useState(0)
 
     const fetchJobs = async () => {
         setIsLoading(true)
@@ -30,11 +30,11 @@ export const DataProvider = ({ children }) => {
         }, 1200)
     }, [])
 
-    console.log(jobs)
-
     return (
         <Context.Provider value={{
-            isLoading, fetchErr, jobs
+            FaAngleDoubleRight,
+            isLoading, fetchErr,
+            value, setValue, jobs
         }}>
             {children}
         </Context.Provider>
